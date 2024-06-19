@@ -1,0 +1,117 @@
+﻿NCBI_accession,subject_id,family_role,antibiotics_current_use,antibiotics_family,antibiotics_family_CARD,abx_ever,maternal_abx,body_site,body_subsite,infant_age,birth_weight,visit_number,country,born_method,premature,gestational_age,is_bf,is_ff,started_solids,feeding_practice,bead_beating,region,sequencing_platform,lifestyle
+SRR22213046,EP-15,child,yes,PenGen;Metronidazol,NA,yes,no,stool,stool,28,625,2,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212936,EP-2,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,28,814,2,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213122,EP-27,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,28,800,2,NO,vaginal,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213068,EP-28,child,yes,NA,NA,yes,no,stool,stool,28,935,2,NO,vaginal,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213002,EP-30,child,yes,KeflinGenta,cephalosporin;aminoglycoside,yes,yes,stool,stool,28,1060,2,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212958,EP-33,child,yes,NA,NA,yes,no,stool,stool,28,1150,2,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212947,EP-35,child,yes,Vancomycin;Cephalo,NA,yes,no,stool,stool,28,1140,2,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213096,EP-35,child,yes,Vancomycin;Cephalo,NA,yes,no,stool,stool,120,1140,3,NO,c_section,yes,26,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213085,EP-36,child,yes,Vancomycin;Cephalo;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,7,950,1,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213074,EP-36,child,yes,Vancomycin;Cephalo;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,28,950,2,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213030,EP-36,child,yes,Vancomycin;Cephalo;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,120,950,3,NO,c_section,yes,26,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213019,EP-36,child,yes,Vancomycin;Cephalo;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,365,950,4,NO,c_section,yes,26,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213008,EP-37,child,yes,Vancomycin;Cephalo,NA,yes,no,stool,stool,7,890,1,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212941,EP-39,child,yes,PenGen;Vancomycin;Cephalo;Meropenem,NA,yes,no,stool,stool,365,690,4,NO,vaginal,yes,24,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212935,EP-4,child,yes,NA,NA,yes,yes,stool,stool,7,680,1,NO,c_section,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212932,EP-4,child,yes,NA,NA,yes,yes,stool,stool,28,680,2,NO,c_section,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212940,EP-40,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,7,675,1,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212939,EP-40,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,28,675,2,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212938,EP-40,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,120,685,3,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212934,EP-42,child,yes,NA,NA,yes,no,stool,stool,7,675,1,NO,c_section,yes,26,yes,yes,no,mixed feeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212929,EP-45,child,yes,Vancomycin,NA,yes,no,stool,stool,28,850,2,NO,vaginal,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212927,EP-46,child,yes,NA,NA,yes,yes,stool,stool,7,730,1,NO,vaginal,yes,24,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212922,EP-49,child,yes,AmpGen,penam;aminoglycoside,yes,yes,stool,stool,28,945,2,NO,vaginal,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212917,EP-5,child,yes,PenGen,penam;aminoglycoside,yes,yes,stool,stool,7,925,1,NO,vaginal,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212916,EP-5,child,yes,PenGen,penam;aminoglycoside,yes,yes,stool,stool,28,925,2,NO,vaginal,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212915,EP-5,child,yes,PenGen,penam;aminoglycoside,yes,yes,stool,stool,120,650,3,NO,vaginal,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212921,EP-50,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,7,790,1,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212920,EP-50,child,yes,NA,NA,yes,no,stool,stool,28,790,3,NO,c_section,yes,26,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212919,EP-51,child,yes,Metronidazol;KeflinGenta,NA,yes,yes,stool,stool,28,650,2,NO,vaginal,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213131,EP-55,child,yes,NA,NA,yes,no,stool,stool,28,980,2,NO,c_section,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213129,EP-56,child,yes,AmpGen,penam;aminoglycoside,yes,no,stool,stool,7,640,1,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213126,EP-58,child,yes,PenGen;Cephalo;Metronidazol;Cloxacillin,NA,yes,yes,stool,stool,7,735,1,NO,c_section,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213125,EP-58,child,yes,PenGen;Cephalo;Metronidazol;Cloxacillin,NA,yes,yes,stool,stool,28,735,2,NO,c_section,yes,25,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213124,EP-62,child,yes,PenGen;Vancomycin;Cephalo,NA,yes,no,stool,stool,7,880,1,NO,vaginal,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213123,EP-62,child,yes,PenGen;Vancomycin;Cephalo,NA,yes,no,stool,stool,28,880,2,NO,vaginal,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213119,EP-63,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,28,835,2,NO,vaginal,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213117,EP-66,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,7,444,1,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213116,EP-66,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,28,444,2,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213114,EP-66,child,yes,PenGen,penam;aminoglycoside,yes,no,stool,stool,365,444,4,NO,c_section,yes,27,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213110,EP-68,child,yes,NA,NA,yes,no,stool,stool,28,950,2,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213109,EP-68,child,yes,NA,NA,yes,no,stool,stool,120,950,3,NO,c_section,yes,28,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213108,EP-68,child,yes,NA,NA,yes,no,stool,stool,365,950,4,NO,c_section,yes,28,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213107,EP-76,child,yes,NA,NA,yes,no,stool,stool,28,555,2,NO,c_section,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213105,EP-9,child,yes,PenGen,penam;aminoglycoside,yes,yes,stool,stool,7,620,1,NO,c_section,yes,24,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213104,EP-9,child,yes,PenGen,penam;aminoglycoside,yes,yes,stool,stool,28,620,2,NO,c_section,yes,24,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213066,FT-59,child,no,NA,NA,no,no,stool,stool,365,3075,4,NO,vaginal,no,41,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213065,FT-60,child,no,NA,NA,no,NA,stool,stool,7,3305,1,NO,vaginal,no,40,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213059,FT-69,child,no,NA,NA,no,NA,stool,stool,7,4815,1,NO,vaginal,no,39,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213055,FT-69,child,no,NA,NA,no,NA,stool,stool,365,4815,4,NO,vaginal,no,39,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213054,FT-70,child,no,NA,NA,no,NA,stool,stool,7,3455,1,NO,vaginal,no,41,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213053,FT-70,child,no,NA,NA,no,NA,stool,stool,365,3455,4,NO,vaginal,no,41,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213051,FT-71,child,no,NA,NA,no,NA,stool,stool,7,3635,1,NO,vaginal,no,41,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213049,FT-72,child,no,NA,NA,no,NA,stool,stool,7,3714,1,NO,vaginal,no,38,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213044,FT-72,child,no,NA,NA,no,NA,stool,stool,365,3714,4,NO,vaginal,no,38,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213043,FT-73,child,no,NA,NA,no,NA,stool,stool,7,3424,1,NO,vaginal,no,40,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213040,FT-74,child,no,NA,NA,no,NA,stool,stool,7,3790,1,NO,vaginal,no,40,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213005,FT-74,child,no,NA,NA,no,NA,stool,stool,365,3790,4,NO,vaginal,no,40,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213004,FT-75,child,no,NA,NA,no,NA,stool,stool,7,3590,1,NO,vaginal,no,40,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212997,VP1-1,child,yes,NA,NA,yes,no,stool,stool,7,1165,1,NO,vaginal,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213003,VP1-11,child,yes,NA,NA,yes,no,stool,stool,28,1155,2,NO,c_section,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213000,VP1-11,child,yes,NA,NA,yes,no,stool,stool,365,1155,4,NO,c_section,yes,29,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212996,VP1-12,child,yes,NA,NA,yes,no,stool,stool,28,1255,3,NO,c_section,yes,32,yes,yes,no,mixed feeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212994,VP1-13,child,yes,AmpGen,penam;aminoglycoside,yes,no,stool,stool,7,1100,1,NO,vaginal,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212993,VP1-13,child,yes,AmpGen,penam;aminoglycoside,yes,no,stool,stool,28,1100,2,NO,vaginal,yes,27,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212990,VP1-13,child,yes,AmpGen,penam;aminoglycoside,yes,no,stool,stool,365,1100,4,NO,vaginal,yes,27,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212988,VP1-19,child,yes,NA,NA,yes,yes,stool,stool,7,1322,1,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212987,VP1-19,child,yes,NA,NA,yes,yes,stool,stool,365,1322,4,NO,vaginal,yes,29,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212985,VP1-21,child,yes,AmpGen,penam;aminoglycoside,yes,yes,stool,stool,7,1190,1,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212984,VP1-21,child,yes,AmpGen,penam;aminoglycoside,yes,yes,stool,stool,28,1190,2,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212982,VP1-21,child,yes,AmpGen,penam;aminoglycoside,yes,yes,stool,stool,365,1190,4,NO,vaginal,yes,29,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212981,VP1-22,child,yes,NA,NA,yes,no,stool,stool,28,1023,2,NO,c_section,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212978,VP1-23,child,yes,AmpGen;Metronidazol,NA,yes,yes,stool,stool,7,1320,1,NO,vaginal,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212977,VP1-23,child,yes,AmpGen;Metronidazol,NA,yes,yes,stool,stool,28,1320,2,NO,vaginal,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212974,VP1-24,child,yes,NA,NA,yes,yes,stool,stool,7,1180,1,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212973,VP1-24,child,yes,NA,NA,yes,yes,stool,stool,28,1180,2,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212972,VP1-24,child,yes,NA,NA,yes,yes,stool,stool,365,1180,4,NO,vaginal,yes,29,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212971,VP1-26,child,yes,NA,NA,yes,yes,stool,stool,7,1455,1,NO,vaginal,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212967,VP1-29,child,yes,NA,NA,yes,no,stool,stool,7,1500,1,NO,vaginal,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212960,VP1-3,child,yes,NA,NA,yes,yes,stool,stool,365,1320,4,NO,c_section,yes,28,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212957,VP1-38,child,yes,NA,NA,yes,no,stool,stool,7,1235,1,NO,c_section,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212954,VP1-41,child,yes,NA,NA,yes,no,stool,stool,7,1317,1,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212953,VP1-41,child,yes,NA,NA,yes,no,stool,stool,28,1317,2,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212951,VP1-41,child,yes,NA,NA,yes,no,stool,stool,365,1317,4,NO,vaginal,yes,29,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212950,VP1-43,child,yes,NA,NA,yes,no,stool,stool,7,1560,1,NO,c_section,yes,31,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212946,VP1-43,child,yes,NA,NA,yes,no,stool,stool,365,1560,4,NO,c_section,yes,31,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212945,VP1-48,child,yes,NA,NA,yes,yes,stool,stool,7,1180,1,NO,vaginal,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22212944,VP1-48,child,yes,NA,NA,yes,yes,stool,stool,28,1180,2,NO,vaginal,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213103,VP1-52,child,yes,NA,NA,yes,yes,stool,stool,7,1290,1,NO,vaginal,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213101,VP1-52,child,yes,NA,NA,yes,yes,stool,stool,28,1290,2,NO,vaginal,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213099,VP1-52,child,yes,NA,NA,yes,yes,stool,stool,365,1290,4,NO,vaginal,yes,28,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213098,VP1-53,child,yes,NA,NA,yes,yes,stool,stool,7,1215,1,NO,vaginal,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213094,VP1-53,child,yes,NA,NA,yes,yes,stool,stool,365,1215,4,NO,vaginal,yes,29,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213093,VP1-54,child,yes,AmpGen,penam;aminoglycoside,yes,no,stool,stool,7,1445,1,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213091,VP1-54,child,yes,AmpGen,penam;aminoglycoside,yes,no,stool,stool,28,1445,2,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213090,VP1-6,child,yes,NA,NA,yes,no,stool,stool,28,1070,2,NO,c_section,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213083,VP1-6,child,yes,NA,NA,yes,no,stool,stool,365,1070,4,NO,c_section,yes,29,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213088,VP1-64,child,yes,Vancomycin;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,7,1150,1,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213087,VP1-64,child,yes,Vancomycin;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,28,1150,2,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213084,VP1-64,child,yes,Vancomycin;Cloxacillin;Gentamicin,NA,yes,no,stool,stool,365,1150,4,NO,c_section,yes,28,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213082,VP1-65,child,yes,NA,NA,yes,no,stool,stool,7,950,1,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213080,VP1-65,child,yes,NA,NA,yes,no,stool,stool,28,950,2,NO,c_section,yes,28,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213079,VP1-65,child,yes,NA,NA,yes,no,stool,stool,365,950,4,NO,c_section,yes,28,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213078,VP1-7,child,yes,NA,NA,yes,no,stool,stool,7,1360,1,NO,c_section,yes,32,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213075,VP1-7,child,yes,NA,NA,yes,no,stool,stool,365,1360,4,NO,c_section,yes,32,no,no,yes,only solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213073,VP1-8,child,yes,NA,NA,yes,no,stool,stool,7,1775,1,NO,c_section,yes,32,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213038,VP2-10,child,no,NA,NA,no,no,stool,stool,7,1375,1,NO,c_section,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213037,VP2-10,child,no,NA,NA,no,no,stool,stool,28,1375,2,NO,c_section,yes,29,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213035,VP2-10,child,no,NA,NA,no,no,stool,stool,365,1375,4,NO,c_section,yes,29,yes,no,yes,breastfeeding and solids,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213034,VP2-14,child,no,NA,NA,no,no,stool,stool,7,1425,1,NO,c_section,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213032,VP2-16,child,no,NA,NA,no,no,stool,stool,7,1535,1,NO,c_section,yes,31,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213025,VP2-17,child,no,NA,NA,no,no,stool,stool,7,1650,1,NO,c_section,yes,31,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213022,VP2-18,child,no,NA,NA,no,no,stool,stool,7,1010,1,NO,vaginal,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213021,VP2-18,child,no,NA,NA,no,no,stool,stool,28,1010,2,NO,vaginal,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213018,VP2-25,child,no,NA,NA,no,no,stool,stool,7,1075,1,NO,c_section,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213015,VP2-31,child,no,NA,NA,no,no,stool,stool,7,1400,1,NO,c_section,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
+SRR22213011,VP2-47,child,no,NA,NA,no,yes,stool,stool,7,1540,1,NO,vaginal,yes,30,yes,no,no,exclusive breastfeeding,yes,Europe,IlluminaMiSeq,industrialized
