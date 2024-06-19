@@ -1,0 +1,134 @@
+---
+title: "Hands-on part1 : Metaphlan4"
+output: html_notebook
+---
+
+
+```{r}
+# Load libraries
+library(tidyverse)
+library(mia)
+library(scater)
+# Load datasets
+metadata <- read_csv("../../datasets/Metadata_Pingu.csv") %>%
+  column_to_rownames(var="NCBI_accession") %>%
+  mutate(age_cat=paste(as.character(infant_age), "days", sep=" "))
+mpa_default <- read_tsv("../../datasets/pingu_mpadefault_abundance_table.txt", skip=1) # skip the first line of mpa output (database name)
+mpa_withunknown <- read_tsv("../../datasets/pingu_mpaunclass_abundance_table.txt", skip=1)
+```
+
+## Structure of Metaphlan4 output
+
+Let's first take a peak at the Metaphlan4 output table. The output table contains the taxonomy in the "clade_name" column. Taxa are rows and samples are columns. The default output gives you the relative abundances of each taxa in the samples.
+
+Let's sum the counts of the first sample "SRR22212915".
+
+```{r}
+sum(mpa_default$SRR22212915)
+```
+
+**Question: Take a look at the mpa table to understand why the counts do not sum to 100 as expected.**
+
+## Parse the Metaphlan4 output
+
+Let's parse the Metaphlan4 output to create a data container for Mia. Fortunately for us, the miaverse contain a function to directly import the metaphlan4 output into the data object.
+
+```{r}
+tse <- loadFromMetaphlan("mpadefault_abundance_table.txt", sample_meta=metadata, removeTaxaPrefixes=TRUE)
+tse # get a summary of the TSE contents
+```
+
+```{r}
+taxonomyRanks(tse) # see how many taxonomic ranks we have in the TSE
+```
+
+## Metaphlan4 sample exploration
+
+### Alpha-diversity analysis
+
+Let's start with a good old alpha-diversity overview. In infant gut microbiome we expect an increase in richness and alpha-diversity during the gut microbiota maturation...
+
+```{r}
+tse <- mia::estimateRichness(tse, assay.type = "counts", index = "observed", name="observed")
+tse <- mia::estimateDiversity(tse, assay.type = "counts",index = "shannon", name = "shannon")
+ 
+div_melt <- as.data.frame(tse$observed) %>%
+  dplyr::rename("Observed_richness"="tse$observed") %>%
+  rownames_to_column("SampleID")
+
+aplha_melt <- as.data.frame(tse$shannon) %>%
+  dplyr::rename("Shannon index"="tse$shannon") %>%
+  rownames_to_column("SampleID")
+
+metadata_samples <- metadata %>%
+  rownames_to_column("SampleID")
+
+plot_data <- dplyr::full_join(div_melt, metadata_samples)
+plot_data <- dplyr::full_join(aplha_melt, plot_data)
+
+plot_data$age_cat <- factor(plot_data$age_cat, levels = c("7 days", "28 days", "120 days", "365 days"))
+plot_data %>% ggplot(aes(x=age_cat, y=Observed_richness, color=age_cat)) +
+  geom_boxplot() +
+  theme_light() +
+  ylab("Observed species richness")
+
+```
+
+**Question: plot the alpha-diversity (shannon index)**
+
+### Community composition analysis
+
+Now, let's take a look at the relative abundances of the samples, grouped by infant age group.
+
+```{r}
+# Getting top taxa on a Family level
+tse_family <- mergeFeaturesByRank(tse, rank ="Family", onRankOnly=TRUE)
+top_taxa <- getTopFeatures(tse_family, top = 10)
+
+# Renaming the "Phylum" rank to keep only top taxa and the rest to "Other"
+family_renamed <- lapply(rowData(tse_family)$Family,
+                   function(x){if (x %in% top_taxa) {x} else {"Other"}})
+rowData(tse_family)$Family <- as.character(family_renamed)
+
+molten_tse <- mia::meltAssay(tse_family,
+                        add_row_data = TRUE,
+                        add_col_data = TRUE,
+                        assay.type = "counts")
+
+# Visualizing the composition barplot, with samples order by "Bacteroidetes"
+molten_tse %>% ggplot(aes(x=SampleID, y=counts, fill=Family)) +
+  geom_bar(stat="identity") +
+  facet_grid(.~infant_age, scales="free", space="free") +
+  theme_light() +
+    theme(axis.text.x=element_blank(), 
+      axis.ticks.x=element_blank()) +
+  ylab("Relative abundance (%)")
+
+```
+
+**Question: Subset the samples to include only samples from 7 day of age and look at the community composition of the samples from premature vs full term infants**
+
+### Unsupervised ordination
+
+Finally, let's get an overview of the samples using a PCoA with Bray-Curtis distances at the species level.
+
+```{r}
+tse <- runMDS(tse,
+              FUN = vegan::vegdist,
+              method = "bray",
+              assay.type = "counts",
+              name = "MDS_bray")
+
+# Calculate explained variance
+e <- attr(reducedDim(tse, "MDS_bray"), "eig")
+rel_eig <- e / sum(e[e > 0])
+
+plotReducedDim(tse, "MDS_bray", colour_by = "infant_age")+
+  labs(x = paste("PCoA 1 (", round(100 * rel_eig[[1]], 1),"%", ")", sep = ""),
+       y = paste("PCoA 2 (", round(100 * rel_eig[[2]], 1), "%", ")", sep = ""))
+```
+
+## Next steps:
+
+**Question: use the metaphlan4 output containing the estimation of the unclassified reads, what differences can you see?**
+
