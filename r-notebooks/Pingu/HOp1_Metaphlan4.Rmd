@@ -10,7 +10,7 @@ library(tidyverse)
 library(mia)
 library(scater)
 # Load datasets
-metadata <- read_csv("../../datasets/Metadata_Pingu.csv") %>%
+metadata <- read_csv("../../datasets/pingu_metadata.csv") %>%
   column_to_rownames(var="NCBI_accession") %>%
   mutate(age_cat=paste(as.character(infant_age), "days", sep=" "))
 mpa_default <- read_tsv("../../datasets/pingu_mpadefault_abundance_table.txt", skip=1) # skip the first line of mpa output (database name)
