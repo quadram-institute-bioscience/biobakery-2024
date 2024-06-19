@@ -4,10 +4,17 @@ A script to extract sequencing data from JSON files and save it to a CSV file.
 Andrea Telatin 2024
 """
 
+# Check if pandas is available
+try:
+    import pandas as pd
+except ImportError:
+    print("Please install pandas using 'pip install pandas'")
+    exit(1)
+
 import json
 import argparse
 import os
-import pandas as pd
+import sys
 
 VALID_KEYS = ['fastq1_in_name', 'reads_in', 'reads_out', 'reads_removed_proportion']
 
@@ -85,7 +92,11 @@ def main():
         if not args.md:
             print(df)
         else:
-            print(df.to_markdown())
-            
+            try:
+                print(df.to_markdown())
+            except Exception as e:
+                print(f'Error converting to markdown: {e}', file=sys.stderr)
+                print(df)
+
 if __name__ == '__main__':
     main()
