@@ -1,0 +1,150 @@
+---
+title: "Hands-on part1 : Humann3"
+output: html_notebook
+---
+
+
+```{r}
+# Load libraries
+library(tidyverse)
+# Load datasets
+metadata <- read_csv("../../datasets/pingu_metadata.csv") %>%
+  mutate(age_cat=paste(as.character(infant_age), "days", sep=" "))%>%
+  dplyr::rename("SampleID"="NCBI_accession")
+```
+
+## Humann3 Pathway - unstratified vs stratified output tables
+
+We'll first look at the "simplest" of the HUmann3 output: The pathway abundance table, unstratified. The presented counts were normalized as rpkm before computing the pathway abundance using minPath.
+
+```{r}
+data_cpm <- read_tsv("../../datasets/pingu_humann_pathabundance_unstratified.tsv") %>%
+  dplyr::rename("Pathway"="# Pathway")
+```
+
+Take a look at the table!
+
+**Question: How many pathways are reprensented in this output table?**
+
+```{r}
+mapped_prop <- data_cpm %>%
+  pivot_longer(cols=-Pathway, values_to = "cpm", names_to = "SampleID") %>%
+  mutate(mapped=ifelse(Pathway %in% c("UNMAPPED", "UNINTEGRATED"), Pathway, "MAPPED")) %>%
+  group_by(mapped, SampleID) %>%
+  summarize(prop_mapped=sum(cpm))
+
+mapped_prop %>% ggplot(aes(x=SampleID, y=prop_mapped, fill=mapped)) +
+  geom_bar(stat="identity") +
+  theme_light() +
+    theme(axis.text.x=element_blank(), 
+      axis.ticks.x=element_blank()) +
+  ylab("Relative abundance (per million reads)")
+
+```
+
+**Question: What is the difference between unintegrated and unmapped reads in Humann3?**
+
+Let's quickly look at a the relative abundance of pathway of interest during infant maturation..
+
+```{r}
+#Pathway_name="FUC-RHAMCAT-PWY"
+Pathway_name="ECASYN-PWY"
+
+Pathway_data <- data_cpm %>%
+  pivot_longer(cols=-Pathway, values_to = "cpm", names_to = "SampleID") %>%
+  filter(grepl(Pathway_name,Pathway))
+
+Pathway_data <- dplyr::full_join(metadata, Pathway_data)
+
+Pathway_data$age_cat <- factor(Pathway_data$age_cat, levels = c("7 days", "28 days", "120 days", "365 days"))
+Pathway_data %>% ggplot(aes(x=age_cat, y=log(cpm))) + 
+  geom_boxplot() +
+  facet_grid(.~premature) +
+  theme_light() 
+  
+
+```
+
+
+
+
+Next, we'll take a look at the same table, but in the "stratified" format. 
+
+**Question: What differences do you notice? **
+
+```{r}
+data_cpm_strat <- read_tsv("../../datasets/pingu_humann_pathabundance_stratified.tsv") %>%
+  dplyr::rename("Pathway"="# Pathway")
+
+```
+
+Let's use the stratified output to look at the taxa contributing to our pathway of interest:
+
+```{r}
+Pathway_data_strat <- data_cpm_strat %>%
+  pivot_longer(cols=-Pathway, values_to = "cpm", names_to = "SampleID") %>%
+  filter(grepl(Pathway_name,Pathway)) %>%
+  separate(Pathway, into=c("Pathway","taxa"), sep="\\|")
+
+Pathway_data_strat <- dplyr::full_join(metadata, Pathway_data_strat)
+
+Pathway_data_strat$age_cat <- factor(Pathway_data_strat$age_cat, levels = c("7 days", "28 days", "120 days", "365 days"))
+Pathway_data_strat %>% ggplot(aes(x=SampleID, y=cpm, fill=taxa)) + 
+  geom_bar(stat="identity") +
+  facet_grid(age_cat~premature, scales="free", space="free") +
+  ylim(0,200) +
+  theme_light() +
+    theme(axis.text.x=element_blank(), 
+      axis.ticks.x=element_blank()) +
+  ylab("Relative abundance (per million reads)")
+  
+```
+
+## Humann3 Gene counts - unstratified table
+
+Finally, let's take a stab at looking at the gene count table. Depending on your computer, you may or may not be able to load this massive table in memory... The stratified output is even larger, but it is the same principle as for the pathway output.
+
+```{r}
+gene_table <- read_tsv("../../datasets/pingu_humann_geneabundance_unstratified.tsv.gz")  %>%
+  dplyr::rename("GeneFamily"="# Gene Family")
+```
+
+**Question: How many pathways are reprensented in this output table?**
+
+```{r}
+long_gene <- gene_table %>%
+  pivot_longer(cols=-GeneFamily, values_to = "cpm", names_to = "SampleID") 
+
+mapped_prop <- long_gene %>%
+  mutate(mapped=ifelse(GeneFamily %in% c("UNMAPPED", "UNINTEGRATED"), GeneFamily, "MAPPED")) %>%
+  group_by(mapped, SampleID) %>%
+  summarize(prop_mapped=sum(cpm))
+
+mapped_prop %>% ggplot(aes(x=SampleID, y=prop_mapped, fill=mapped)) +
+  geom_bar(stat="identity") +
+  theme_light() +
+    theme(axis.text.x=element_blank(), 
+      axis.ticks.x=element_blank()) +
+  ylab("Relative abundance (per million reads)")
+
+```
+
+**Question: Why is there no unintegrated counts here?**
+
+Let's plot the gene richness by infant age...
+
+```{r}
+gene_cpm <- long_gene %>%
+  filter(!GeneFamily %in% c("UNMAPPED")) %>%
+  filter(cpm!=0) %>% group_by(SampleID) %>%
+  tally()
+
+data_nbGenes <- dplyr::full_join(gene_cpm, metadata)
+
+data_nbGenes$age_cat <- factor(data_nbGenes$age_cat, levels = c("7 days", "28 days", "120 days", "365 days"))
+data_nbGenes %>% ggplot(aes(x=age_cat, y=n, color=age_cat)) +
+  geom_boxplot() +
+  theme_bw()
+
+```
+
