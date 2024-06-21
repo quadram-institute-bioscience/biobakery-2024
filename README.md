@@ -3,6 +3,24 @@ A QIB Workshop on popular tools part of the ["BioBackery" suite](https://github.
 
 📖 [Repository's Wiki](https://github.com/quadram-institute-bioscience/biobackery-2024/wiki)
 
+
+### Programme
+
+Time          | Event
+--------------|---------------
+**10:00 - 11:45** | **Seminar**
+ ~45m       | Introduction and  MetaPhlAn
+ ☕️          | Coffee break
+ ~45m       | Phylogenomic and databases
+ ~15m       | Humann
+**14:00 - 16:30** | **Workshop**
+
+
+     
+
+
+
+
 ---
 
 The "BioBakery" suite is a comprehensive set of tools for analyzing microbial communities, including taxonomic, functional, and strain-level profiling ([Beghini 2020](https://doi.org/10.1101/2020.11.19.388223).
