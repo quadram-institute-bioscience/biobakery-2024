@@ -9,10 +9,12 @@ A QIB Workshop on popular tools part of the ["BioBackery" suite](https://github.
 Time          | Event
 --------------|---------------
 **10:00 - 11:45** | **Seminar**
- ~45m       | Introduction and  MetaPhlAn
+ ~15m       | Introduction
+ ~30m       | MetaPhlAn & databases
  ☕️          | Coffee break
- ~45m       | Phylogenomic and databases
  ~15m       | Humann
+ ~15m       | Using Metaphlan and Humann on the QIB HPC
+ ~15m       | Questions and discussions
 **14:00 - 16:30** | **Workshop**
 
 
