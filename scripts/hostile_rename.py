@@ -6,13 +6,15 @@ import os
 
 def rename(fileFrom, fileTo, dry_run):
     if dry_run:
-        print(f'Renaming {fileFrom}\n\tto {fileTo}')
+        print(f'[DRY_RUN] Renaming {fileFrom}\n\tto {fileTo}')
     else:
         try:
             os.rename(fileFrom, fileTo)
             print(f'Renamed {fileFrom}\n\tto {fileTo}')
         except OSError as e:
             print(f'Error renaming {fileFrom}\n\tto {fileTo}: {e}')
+            return False
+    return True
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Rename output files to match input file names based on JSON configurations.')
@@ -38,21 +40,26 @@ def read_json_files(json_files, verbose=False):
 
 def rename_files(json_data, files_dir, dryrun=False):
     directory = os.path.abspath(files_dir)
+    success = []
     for entry in json_data:
         old_name1 = os.path.join(directory, entry[0]['fastq1_out_name'])
         new_name1 = os.path.join(directory, entry[0]['fastq1_in_name'])
         old_name2 = os.path.join(directory, entry[0]['fastq2_out_name'])
         new_name2 = os.path.join(directory, entry[0]['fastq2_in_name'])
-
+        
         if os.path.exists(old_name1):
-            rename(old_name1, new_name1, dryrun)
+            if rename(old_name1, new_name1, dryrun):
+                success.append(old_name1)
         else:
             print(f'ERROR: File {old_name1} does not exist and cannot be renamed.')
 
         if os.path.exists(old_name2):
-            rename(old_name2, new_name2, dryrun)
+            if rename(old_name2, new_name2, dryrun):
+                success.append(old_name2)
         else:
             print(f'ERROR: File {old_name2} does not exist and cannot be renamed.')
+    
+    print(f'Successfully renamed {len(success)} (fastq) over {len(json_data)} datasets.') if success else print('No files were renamed.')
 
 def main():
     args = parse_arguments()
