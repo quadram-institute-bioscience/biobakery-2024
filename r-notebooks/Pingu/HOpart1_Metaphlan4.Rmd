@@ -34,7 +34,7 @@ sum(mpa_default$SRR22212915)
 Let's parse the Metaphlan4 output to create a data container for Mia. Fortunately for us, the miaverse contain a function to directly import the metaphlan4 output into the data object.
 
 ```{r}
-tse <- loadFromMetaphlan("mpadefault_abundance_table.txt", sample_meta=metadata, removeTaxaPrefixes=TRUE)
+tse <- loadFromMetaphlan("../../datasets/pingu_mpaunclass_abundance_table.txt", sample_meta=metadata, removeTaxaPrefixes=TRUE)
 tse # get a summary of the TSE contents
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Hands-on part1 : Humann3"
+title: "Hands-on part2 : Humann3"
 output: html_notebook
 ---
 
