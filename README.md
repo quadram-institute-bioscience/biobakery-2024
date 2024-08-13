@@ -2,6 +2,7 @@
 A QIB Workshop on popular tools part of the ["BioBakery" suite](https://github.com/biobakery/biobakery)
 
 📖 [Repository's Wiki](https://github.com/quadram-institute-bioscience/biobackery-2024/wiki)
+📖 [Repository's supplementals](https://figshare.com/articles/presentation/QIB_workshop_2024_-_Introduction_to_Biobakery_tools/26425357)
 
 
 ### Programme
